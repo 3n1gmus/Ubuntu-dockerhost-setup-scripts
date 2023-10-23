@@ -2,7 +2,7 @@
 
 # Define network configuration parameters
 NETWORK_CONFIG_FILE="/etc/netplan/01-netcfg.yaml"
-BACKUP_CONFIG_FILE="/etc/netplan/01-netcfg.yaml.bak"
+BACKUP_CONFIG_FILE="${NETWORK_CONFIG_FILE%.*}.bak"
 INTERFACE_NAME="ens33"  # Change this to your actual interface name
 STATIC_IP="192.168.1.100"  # Change this to your desired static IP address
 NETMASK="255.255.255.0"
