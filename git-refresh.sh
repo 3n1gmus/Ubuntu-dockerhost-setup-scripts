@@ -6,7 +6,7 @@
 rm -dfr ./Linux-Bash-Backup-Scripts/
 
 # Clone from Source
-git clone https://github.com/3n1gmus/Ubuntu-dockerhost-setup-scripts.git
+git clone https://github.com/3n1gmus/Linux-Bash-Backup-Scripts.git
 
 # Set Execution
-chmod +x ./Ubuntu-dockerhost-setup-scripts/*.sh
+chmod +x ./Linux-Bash-Backup-Scripts/*.sh
