@@ -9,4 +9,4 @@ rm -dfr ./Linux-Bash-Backup-Scripts/
 git clone https://github.com/3n1gmus/Ubuntu-dockerhost-setup-scripts.git
 
 # Set Execution
-chmod +x ./Linux-Bash-Backup-Scripts/*.sh
+chmod +x ./Ubuntu-dockerhost-setup-scripts/*.sh
