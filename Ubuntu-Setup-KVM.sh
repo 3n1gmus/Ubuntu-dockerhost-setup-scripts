@@ -4,7 +4,7 @@
 sudo apt-get update
 
 # Install Cockpit (NFS and ZIP)
-sudo apt-get install -y ca-certificates curl gnupg lsb-release wget apt-transport-https software-properties-common cockpit net-tools nfs-common cifs-utils unzip zip logrotate vim
+sudo apt-get install -y ca-certificates curl gnupg lsb-release wget apt-transport-https software-properties-common net-tools nfs-common cifs-utils unzip zip logrotate vim
 
 # Remove Snap
 sudo apt autoremove --purge snapd
