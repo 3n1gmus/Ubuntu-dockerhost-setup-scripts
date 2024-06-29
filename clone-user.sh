@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: clone-user src_user_name new_user_name
+# Usage: ./clone-user.sh src_user_name new_user_name
 # From: https://blog.yucas.net/2020/11/08/clone-linux-user-copy-user-based-on-another-one/
 
 SRC=$1
