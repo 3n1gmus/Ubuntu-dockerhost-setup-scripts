@@ -24,7 +24,7 @@ echo "network:
         - $STATIC_IP/24
       routes: 
         - to: default
-          via:$GATEWAY
+          via: $GATEWAY
       nameservers:
         addresses: [$DNS_SERVER]" | sudo tee $NETWORK_CONFIG_FILE
 
