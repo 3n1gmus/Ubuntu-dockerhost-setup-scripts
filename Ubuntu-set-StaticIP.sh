@@ -32,6 +32,7 @@ echo "network:
 sudo netplan apply
 
 # Restart the networking service
-sudo systemctl restart network-manager
+# sudo systemctl restart network-manager
+sudo systemctl restart systemd-networkd
 
 echo "Static IP address configuration complete. Backup saved to $BACKUP_CONFIG_FILE"
