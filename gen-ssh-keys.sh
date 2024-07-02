@@ -1,17 +1,10 @@
 #!/bin/bash
 
-# Backup existing keys (optional but recommended)
-mkdir -p ~/ssh_backup
-mv ~/.ssh/id_rsa* ~/ssh_backup/ 2>/dev/null
+# Backup existing host keys (optional but recommended)
+sudo mkdir -p /etc/ssh/backup
+sudo mv /etc/ssh/ssh_host_* /etc/ssh/backup/
 
-# Delete existing keys
-rm ~/.ssh/id_rsa* 2>/dev/null
+# Regenerate SSH host keys
+sudo dpkg-reconfigure openssh-server
 
-# Generate new SSH key pair without passphrase
-ssh-keygen -t rsa -b 4096 -N ""
-
-# Add new SSH key to SSH agent (optional)
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-
-echo "SSH key regeneration complete."
+echo "SSH host key regeneration complete."
