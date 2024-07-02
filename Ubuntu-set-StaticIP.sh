@@ -11,6 +11,7 @@ DNS_SERVER="8.8.8.8"  # Change this to your DNS server IP address
 
 # Create a backup of the current Netplan configuration
 sudo cp $NETWORK_CONFIG_FILE $BACKUP_CONFIG_FILE
+chmod 700 $NETWORK_CONFIG_FILE
 
 # Create or modify the Netplan configuration file
 echo "network:
@@ -18,8 +19,12 @@ echo "network:
   renderer: networkd
   ethernets:
     $INTERFACE_NAME:
-      addresses: [$STATIC_IP/24]
-      gateway4: $GATEWAY
+      dhcp4: no
+      addresses: 
+        - $STATIC_IP/24
+      routes: 
+        - to: default
+          via:$GATEWAY
       nameservers:
         addresses: [$DNS_SERVER]" | sudo tee $NETWORK_CONFIG_FILE
 
